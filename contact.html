@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kishore Kannan N - Contact</title>
+    <link rel="stylesheet" href="styles/contactStyles.css">
+    <link rel="stylesheet" href="styles/globalStyles.css">
+    <script src="globalScript.js" defer></script> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <!-- Download CV Button -->
+            <a href="images/Kishore CV.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> CV
+            </a>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Keep in touch:</p>
+
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/kishore-kannan-n-5913b7266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-btn linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Kishorekannann82" target="_blank" class="contact-btn github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://leetcode.com/u/4Eu2vY0f5D/" target="_blank" class="contact-btn leetcode">
+                    <i class="fas fa-code"></i> LeetCode
+                </a>
+                <a href="https://www.codechef.com/users/kishore_kannan" target="_blank" class="contact-btn codechef">
+                    <i class="fas fa-utensils"></i> CodeChef
+                </a>
+                <a href="mailto:kishorekannann82@gmail.com" class="contact-btn gmail">
+                    <i class="fas fa-envelope"></i> Gmail
+                </a>
+                <a href="tel:+919342940868" class="contact-btn phone" id="phone-btn">
+                    <i class="fas fa-phone-alt"></i> Phone
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kishore Kannan N. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const buttons = document.querySelectorAll(".contact-btn");
+            const phoneButton = document.getElementById("phone-btn");
+
+            // Ensure that the width calculation happens after everything is loaded
+            window.addEventListener('load', function() {
+                const phoneButtonWidth = phoneButton.offsetWidth;
+
+                // Apply the width to all buttons
+                buttons.forEach(button => {
+                    button.style.width = `${phoneButtonWidth}px`;
+                });
+            });
+
+            // Recalculate button widths if window is resized (to handle mobile view changes)
+            window.addEventListener('resize', function() {
+                const phoneButtonWidth = phoneButton.offsetWidth;
+                buttons.forEach(button => {
+                    button.style.width = `${phoneButtonWidth}px`;
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

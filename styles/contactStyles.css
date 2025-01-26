@@ -1,0 +1,171 @@
+/* Header Styling */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover, 
+header nav ul li a.active {
+    color: #00bcd4;
+}
+
+/* Download CV Button */
+.download-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn i {
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+.download-btn:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Styling for all Buttons */
+.contact-btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 180px;
+}
+
+.contact-btn i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.contact-btn:hover {
+    background-color: #0288a3;
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn.linkedin {
+    background-color: #007bb5;
+}
+.contact-btn.linkedin:hover {
+    background-color: #005582;
+}
+
+.contact-btn.github {
+    background-color: #333;
+}
+.contact-btn.github:hover {
+    background-color: #1a1a1a;
+}
+
+.contact-btn.leetcode {
+    background-color: #f89f1b;
+}
+.contact-btn.leetcode:hover {
+    background-color: #d87b00;
+}
+
+.contact-btn.codechef {
+    background-color: #5b4638;
+}
+.contact-btn.codechef:hover {
+    background-color: #4a3a2e;
+}
+
+.contact-btn.gmail {
+    background-color: #d14836;
+}
+.contact-btn.gmail:hover {
+    background-color: #b33929;
+}
+
+.contact-btn.phone {
+    background-color: #00bcd4;
+}
+.contact-btn.phone:hover {
+    background-color: #0288a3;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    .download-btn {
+        margin-top: 10px;
+    }
+
+    .contact-btn {
+        font-size: 1.1em;
+        padding-left: 10px;
+        width: auto;
+        min-width: 180px;
+        max-width: 100%;
+    }
+}

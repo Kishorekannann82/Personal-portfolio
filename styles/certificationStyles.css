@@ -1,0 +1,110 @@
+/* Certifications Section */
+#certifications {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+#certifications h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Certification Cards Container */
+.certification-group {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Certification Cards */
+.organization {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.organization:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.organization h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.organization ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+    counter-reset: item; /* Reset counter for each list */
+}
+
+.organization ul li {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Add serial numbers to list items */
+.organization ul li::before {
+    content: counter(item) ". ";
+    counter-increment: item; /* Increment counter for each item */
+    color: #555;
+}
+
+/* View Certificate Button */
+.view-certificate-btn {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 0;
+    display: block;
+    width: fit-content;
+}
+
+.view-certificate-btn:hover {
+    background-color: #0288a3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .certification-group {
+        width: 90%;
+    }
+
+    .organization {
+        padding: 15px;
+    }
+
+    .organization h3 {
+        font-size: 1.4em;
+    }
+
+    .organization ul li {
+        font-size: 1em;
+    }
+
+    .view-certificate-btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
